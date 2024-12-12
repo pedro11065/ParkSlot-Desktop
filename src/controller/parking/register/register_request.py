@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template
 from flask_login import login_required
-from src.controller.register.entry.register_entry import entry
+from src.controller.parking.register.entry.register_entry import entry
 
 #tudo aqui é: /company...
 
@@ -12,4 +12,4 @@ def register_entry():
         data = request.get_json()
         return entry(data)
     else:
-        return render_template('register/entry.html')
+        return render_template('parking/register/entry.html')
