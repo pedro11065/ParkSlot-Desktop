@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/login.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo_white.png') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+    <main>
+        <section class="top">
+            <box class="title">ParkSlot</box>
+            <box class="register"><a href="/user/register">Criar conta</a></box>
+        </section>
+
+        <section class="bottom">
+            <form id="loginForm" action="/user/login" method="POST">
+                <conteiner>
+                    <box class="msg">Email</box>
+                    <input class="input" type="text" id="email" name="email" required>
+                </conteiner>
+                <conteiner>
+                    <box class="msg">Senha</box>
+                    <input class="input" type="text" id="password" name="password" required>
+                    <box class="msg-password">Esqueci minha senha</box>
+                </conteiner>
+                <conteiner>
+                    <button>Entrar</button>
+                </conteiner>
+            </form>
+        </section>
+    </main>
+</body>
